@@ -19,6 +19,11 @@ app.use(express.urlencoded({ extended: true }))
 // Rotas
 app.use('/api', routes)
 
+// Rota de teste
+app.get('/', (req, res) => {
+  res.json({ message: 'API NewAge ERP - Backend funcionando!' })
+})
+
 // Sincroniza o banco de dados e inicia o servidor
 sequelize.sync({ alter: true })
   .then(() => {

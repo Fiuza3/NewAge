@@ -94,7 +94,11 @@ export default defineComponent({
       { title: 'Empresas', icon: 'mdi-domain', to: '/administrativo/empresas' },
       { title: 'Departamentos', icon: 'mdi-office-building', to: '/administrativo/departamentos' },
       { title: 'Colaboradores', icon: 'mdi-account-group', to: '/administrativo/colaboradores' },
-      { title: 'Configurações', icon: 'mdi-cog', to: '/administrativo/configuracoes' }
+      { title: 'Configurações', icon: 'mdi-cog', to: '/administrativo/configuracoes' },
+      { title: 'Produtos', icon: 'mdi-package-variant-closed', to: '/estoque/produtos' },
+      { title: 'Categorias', icon: 'mdi-shape', to: '/estoque/categorias' },
+      { title: 'Fornecedores', icon: 'mdi-truck', to: '/estoque/fornecedores' },
+      { title: 'Inventários', icon: 'mdi-clipboard-list', to: '/estoque/inventarios' }
     ]
     
     // Título da página atual

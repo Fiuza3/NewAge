@@ -12,6 +12,17 @@ const Colaboradores = () => import('@/modules/administrativo/pages/Colaboradores
 const ColaboradorForm = () => import('@/modules/administrativo/pages/ColaboradorForm.vue')
 const Configuracoes = () => import('@/modules/administrativo/pages/Configuracoes.vue')
 
+// Módulo de Estoque
+const Produtos = () => import('@/modules/estoque/pages/Produtos.vue')
+const ProdutoForm = () => import('@/modules/estoque/pages/ProdutoForm.vue')
+const Categorias = () => import('@/modules/estoque/pages/Categorias.vue')
+const CategoriaForm = () => import('@/modules/estoque/pages/CategoriaForm.vue')
+const Fornecedores = () => import('@/modules/estoque/pages/Fornecedores.vue')
+const FornecedorForm = () => import('@/modules/estoque/pages/FornecedorForm.vue')
+const Inventarios = () => import('@/modules/estoque/pages/Inventarios.vue')
+const InventarioForm = () => import('@/modules/estoque/pages/InventarioForm.vue')
+const InventarioDetalhes = () => import('@/modules/estoque/pages/InventarioDetalhes.vue')
+
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -79,6 +90,79 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Configuracoes',
     component: Configuracoes,
     meta: { title: 'Configurações' }
+  },
+  // Rotas do Módulo de Estoque
+  {
+    path: '/estoque/produtos',
+    name: 'Produtos',
+    component: Produtos,
+    meta: { title: 'Produtos' }
+  },
+  {
+    path: '/estoque/produtos/novo',
+    name: 'NovoProduto',
+    component: ProdutoForm,
+    meta: { title: 'Novo Produto' }
+  },
+  {
+    path: '/estoque/produtos/:id',
+    name: 'EditarProduto',
+    component: ProdutoForm,
+    meta: { title: 'Editar Produto' }
+  },
+  {
+    path: '/estoque/categorias',
+    name: 'Categorias',
+    component: Categorias,
+    meta: { title: 'Categorias' }
+  },
+  {
+    path: '/estoque/categorias/nova',
+    name: 'NovaCategoria',
+    component: CategoriaForm,
+    meta: { title: 'Nova Categoria' }
+  },
+  {
+    path: '/estoque/categorias/:id',
+    name: 'EditarCategoria',
+    component: CategoriaForm,
+    meta: { title: 'Editar Categoria' }
+  },
+  {
+    path: '/estoque/fornecedores',
+    name: 'Fornecedores',
+    component: Fornecedores,
+    meta: { title: 'Fornecedores' }
+  },
+  {
+    path: '/estoque/fornecedores/novo',
+    name: 'NovoFornecedor',
+    component: FornecedorForm,
+    meta: { title: 'Novo Fornecedor' }
+  },
+  {
+    path: '/estoque/fornecedores/:id',
+    name: 'EditarFornecedor',
+    component: FornecedorForm,
+    meta: { title: 'Editar Fornecedor' }
+  },
+  {
+    path: '/estoque/inventarios',
+    name: 'Inventarios',
+    component: Inventarios,
+    meta: { title: 'Inventários' }
+  },
+  {
+    path: '/estoque/inventarios/novo',
+    name: 'NovoInventario',
+    component: InventarioForm,
+    meta: { title: 'Novo Inventário' }
+  },
+  {
+    path: '/estoque/inventarios/:id',
+    name: 'InventarioDetalhes',
+    component: InventarioDetalhes,
+    meta: { title: 'Detalhes do Inventário' }
   },
   // Rota para página não encontrada
   {
